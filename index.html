@@ -12,14 +12,14 @@
           <li><a>Карта штата</a></li>
           <li><a><img src="img/logo.svg" alt="логотип штата"></a></li>
           <li><a>Фото и видео</a></li>
-          <li><a>Гостиницы</a></li>
+          <li><a href="/catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section>
         <img src="" alt="фото штата">
-        <h1>Седона-небольшой городок в Аризоне, заслуживающий большего</h1>
+        <h1 class="visually-hidden">Седона-небольшой городок в Аризоне, заслуживающий большего</h1>
         <p>Рассмотрим 5 преимуществ, по которым Седона круче,чем Грард Каньон!</p>
       </section>
       <section>
@@ -27,6 +27,26 @@
         <p>Укажите предполагаемые даты поездки,
         И мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       </section>
+      <form action="url" name="Поиск гостиницы в Седоне">
+        <fieldset>
+          <legend>Поиск гостиницы в Седоне</legend>
+      <label for="check-in">Дата заезда
+        <input type="date" name="Дата заезда" id="check-in">
+      </label>
+      <label for="check-out">Дата выезда
+        <input type="date" name="Дата выезда" id="check-out">
+      </label>
+      <label for="adults-guests">Взрослые
+        <input type="number" name="Количество взрослых" id="adults-guests" min="0" max="10" step="1">
+      </label>
+      <label for="children">Дети
+        <input type="number" name="Количество детей" id="children" min="0" max="10" step="1">
+      </label>
+      <label for="button-find">
+        <input type="button" name="найти" value="найти" id="button-find">
+      </label>
+      </fieldset>
+      </form>
     </main>
     <footer>
       <section>
@@ -42,7 +62,7 @@
           </ul>
         </div>
         <div>
-          <p>Website by <a><img src="img/logo-htmlacademy.svg" width="100px" height="50px" alt="Лого Академии"></a></p>
+          <p>Website by <a href="https://htmlacademy.ru/study"><img src="img/logo-htmlacademy.svg" width="100px" height="50px" alt="Лого Академии"></a></p>
         </div>
       </section>
     </footer>
