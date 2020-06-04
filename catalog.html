@@ -3,65 +3,67 @@
     <head>
       <meta charset="utf-8">
       <title>HTML Academy: Каталог</title>
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
       <header>
-        <nav>
+        <nav class="navigation">
             <ul>
-              <li><a>Информация</a></li>
-              <li><a>Карта штата</a></li>
-              <li><a href="/index.html"><img src="img/logo.svg" alt="логотип штата"></a></li>
-              <li><a>Фото и видео</a></li>
-              <li><a>Гостиницы</a></li>
+              <li class="navigation-item"><a>Информация</a></li>
+              <li class="navigation-item"><a>Карта штата</a></li>
+              <li class="navigation-item"><a href="/index.html"><img src="img/logo.svg" alt="логотип штата"></a></li>
+              <li class="navigation-item"><a>Фото и видео</a></li>
+              <li class="navigation-item"><a>Гостиницы</a></li>
             </ul>
         </nav>
       </header>
       <main>
         <h1 class="visually-hidden">Седона-небольшой городок в Аризоне, заслуживающий большего</h1>
           <img src="img/thumb-amara-resort.jpg" alt="Отель у подножия горы">
-          <div><p>Amara resort & SPA
+          <div class="hotel-item"><p>Amara resort & SPA
           Гостинница от 4000</p>
-          <button type="button">Подробнее</button>
-          <button type="button">Забронировать</button></div>
-          <div>
+          <button type="button" class="button details">Подробнее</button>
+          <button type="button" class="button booking">Забронировать</button></div>
+          <div class="rating">
           <span>*</span><span>*</span><span>*</span><span>*</span> <!--Звезды-->
             <p>Рейтинг: 8.5</p>
           </div>
             <img src="img/thumb-desert-quall.jpg" alt="Классический американский двухэтажный отель">
-          <div><p>Desert Quail INN 
+          <div class="hotel-item"><p>Desert Quail INN 
             Мотель от 3000</p>
-            <button type="button">Подробнее</button>
-            <button type="button">Забронировать</button>
+            <button type="button" class="button details" >Подробнее</button>
+            <button type="button" class="button booking">Забронировать</button>
           </div>
-          <div>
+          <div class="rating">
             <span>*</span><span>*</span><span>*</span> <!--Звезды-->
               <p>Рейтинг: 8.9</p>
           </div>
           <img src="img/thumb-villas-diablo.jpg" alt="Уютная вилла в тени деревьев">
-          <div><p>VILLLAS AT POCO DIABLO
+          <div class="hotel-item"><p>VILLLAS AT POCO DIABLO
           Аппартаменты от 2000</p>
-          <button type="button">Подробнее</button>
-          <button type="button">Забронировать</button>
+          <button type="button" class="button details">Подробнее</button>
+          <button type="button" class="button booking">Забронировать</button>
           </div>
-          <div>
+          <div class="rating">
             <span>*</span><span>*</span> <!--Звезды-->
               <p>Рейтинг: 9.2</p>
           </div>
       </main>
       <footer>
         <section>
-        <div>
+        <div class="contacts">
           <p>#visitsedona
           <a href="tel:+7(495)666-02-66"> тел:+7(495)666-02-66</a></p>
           </div>
-        <div>
+        <div class="social-networks">
           <ul>
-            <li><a>Твиттер</a></li>
-            <li><a>Фейсбук</a></li>
-            <li><a>Ютуб</a></li>
+            <li class="social-networks-item"><a>Твиттер</a></li>
+            <li class="social-networks-item"><a>Фейсбук</a></li>
+            <li class="social-networks-item"><a>Ютуб</a></li>
           </ul>
         </div>
-        <div>
+        <div class="developer">
           <p>Website by <a href="https://htmlacademy.ru/study"><img src="img/logo-htmlacademy.svg" width="100px" height="50px" alt="Лого Академии"></a></p>
         </div>
       </section>
