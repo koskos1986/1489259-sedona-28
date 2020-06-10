@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="body-page">
     <header>
       <nav class="navigation">
+        <div class="navigation-container">
         <ul>
           <li class="navigation-item"><a>Информация</a></li>
           <li class="navigation-item"><a>Карта штата</a></li>
-          <li class="navigation-item"><a><img src="img/logo.svg" alt="логотип штата"></a></li>
+          <li class="navigation-item logo"><a><img src="img/logo.svg" alt="логотип штата"></a></li>
           <li class="navigation-item"><a>Фото и видео</a></li>
-          <li class="navigation-item"><a href="/catalog.html">Гостиницы</a></li>
+          <li class="navigation-item"><a href="catalog.html">Гостиницы</a></li>
         </ul>
+      </div>
       </nav>
     </header>
     <main>
       <section class="greetings">
-        <img src="/img/background-photo-full.jpg" alt="фото штата">
+        <img src="img/background-photo-full.jpg" alt="фото штата">
+        <div class="greetings-content">
         <h1>Седона-небольшой городок в Аризоне, заслуживающий большего</h1>
         <p>Рассмотрим 5 преимуществ, по которым Седона круче,чем Гранд Каньон!</p>
+        </div>
       </section>
       <section class="proposal">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,
         И мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       </section>
-      <form class="find-form" action="url" name="Поиск гостиницы в Седоне">
+      <form class="modal find-form" action="url" name="Поиск гостиницы в Седоне">
         <fieldset>
           <legend>Поиск гостиницы в Седоне</legend>
       <label>Дата заезда
@@ -50,17 +54,17 @@
       </fieldset>
       </form>
     </main>
-    <footer>
-      <section>
+    <footer class="main-footer">
+      <section class="container">
         <div class="contacts">
           <p>#visitsedona 
           <a href="tel:+7(495)666-02-66"> тел:+7(495)666-02-66</a></p>
         </div>
         <div class="social-networks">
           <ul>
-            <li class="social-networks-item"><a>Твиттер</a></li>
-            <li class="social-networks-item"><a>Фейсбук</a></li>
-            <li class="social-networks-item"><a>Ютуб</a></li>
+            <li class="social-networks-item"><a>Твиттер<img src="img/twitter.svg"> </a></li>
+            <li class="social-networks-item"><a>Фейсбук<img src="img/fb-icon.svg"> </a></li>
+            <li class="social-networks-item"><a>Ютуб<img src="img/youtube.svg"> </a></li>
           </ul>
         </div>
         <div class="developer">

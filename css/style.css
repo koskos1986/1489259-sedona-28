@@ -1,9 +1,9 @@
 @font-face {
    font-family: "PT Sans"; 
-   src: url("/fonts/ptsans.woff2") format("woff2"),
-        url("/fonts/ptsans.woff") format("woff"),
-        url("/fonts/ptsansbold.woff2") format("woff2"),
-        url("/fonts/ptsansbold.woff") format("woff");
+   src: url("../fonts/ptsans.woff2") format("woff2"),
+        url("../fonts/ptsans.woff") format("woff"),
+        url("../fonts/ptsansbold.woff2") format("woff2"),
+        url("../fonts/ptsansbold.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -35,7 +35,18 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+.page {
+    height:100%;
+}
+.body-page {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+}
 .navigation ul {
+    display:flex;
     margin-left: -40px;
 }
 .navigation li{
@@ -44,6 +55,12 @@ body {
     font-weight: bold;
     text-align: center;
     list-style-type: none;
+    outline: 2px solid rgba(0, 255, 0, 0.3);
+    outline-offset: -5px;
+}
+.logo {
+    width:138px;
+    height: 70px;
 }
 .greetings {
     background-color: var(--basic-white);
@@ -57,6 +74,12 @@ body {
 }
 .greetings p {
     font-family: inherit;
+}
+.greetings-content {
+    outline: 2px solid rgba(0, 255, 0, 0.3);
+    outline-offset: -5px;
+    
+
 }
 .proposal {
     background-color: var(--basic-white);
@@ -84,16 +107,31 @@ body {
     font-size: 21px;
     color: var(--basic-black);
 }
-footer {
+.main-footer .container {
     background-color: var(--basic-white);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height:120px;
+  
+}
+.contacts {
+    width:400px;
+    margin: 0;
+}
+.contacts p {
+    margin:0;
 }
 .contacts a {
     color: var(--basic-black);
     text-decoration: none;
+   
+}
+.social-networks ul {
+    margin:0;
 }
 .social-networks li {
     list-style-type: none;
-}
+    
 .developer p {
     font: inherit;
     font-weight: normal;
