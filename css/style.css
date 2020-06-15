@@ -47,10 +47,11 @@ body {
 .navigation-container {
     display:flex;
     width:1200px;
-    height: 56px;
+    flex-wrap:wrap;
     flex-direction: column;
     justify-content: space-around;
     list-style-type: none;
+    margin-bottom: 0px;
 }
 .navigation{
     padding:0;
@@ -59,6 +60,7 @@ body {
 .navigation-item {
 width:100%;
 display: flex;
+flex-wrap: wrap;
 justify-content: center;
 align-items:center;
 }
@@ -68,6 +70,7 @@ align-items:center;
     margin-left: 0px;
     align-content: center;
     padding:0;
+    margin: 0px;
 }
 .navigation li{
     background-color: var(--basic-white);
@@ -97,20 +100,29 @@ align-items:center;
     font-family: inherit;
     margin: 0px;
     min-height: 26px;
-    max-width: 540px;
+    max-width: 524px;
+    text-align: center;
 }
 .greetings-content {
-    display: grid;
-    grid-template-rows: auto;
-    grid-row-gap: 16.5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 .advantages {
     background-color: var(--basic-white);
 }
 .proposal {
     background-color: var(--basic-white);
+}
+.proposal-booking {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    max-width: 435px;
+    max-height: 157px;
+    margin-left: 383px;
 }
 .proposal h2 {
     font: inherit;
@@ -125,6 +137,8 @@ align-items:center;
     font-size: 14px;
     line-height: 21px;
     color: var(--basic-black-light);
+    text-align: center;
+
 }
 .find-form {
     background-color: var(--basic-white);
@@ -162,18 +176,27 @@ align-items:center;
     margin-bottom: 36px;
     width:251px;
 }
-,.social-networks {
-    
+.social-networks {
 }
 .social-networks ul {
-    display:flex;
-    flex-direction: row;
-    margin:0;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 6px;
+    margin:0px;
+    padding:0px;
+    outline: 2px solid green;
+    
 }
 .social-networks li {
-    justify-content: center;
     list-style-type: none;
-    
+    min-width:48px;
+    max-height:46px;
+    background-color: #669EC0;
+    outline: 2px solid tomato;
+}
+.developer {
+    display: flex;
+}
 .developer p {
     font: inherit;
     font-weight: normal;
