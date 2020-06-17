@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Евгений Косоплеткин](https://up.htmlacademy.ru/htmlcss/28/user/1489259).
-* Наставник: [Юрий Головин](https://htmlacademy.ru/profile/id520167).
+* Наставник: [Андрей Корейкин](https://htmlacademy.ru/profile/id614881).
 
 ---
 
