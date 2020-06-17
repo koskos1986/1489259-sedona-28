@@ -201,12 +201,46 @@ align-items:center;
     font: inherit;
     font-weight: normal;
 }
+/*modal*/
+.modal {
+    width: 568px;
+    height: 486px;
+}
+.modal h2 {
+    height: 86px;
+    margin:0px;
+    background-color: var(--basic-brown-light);
+    color: var(--basic-white);
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+}
 .hotels-container {
     display: grid;
     grid-template-rows: 151px 151px 151px;
 }
+.find-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+}
+.button-find { 
+background-color: var(--basic-blue-light);
+color: #FFFFFF;
+font-weight: bold;
+font-size: 21px;
+line-height: 26px;
+text-transform: uppercase;
+}
+.form-item {
+    outline: 1px solid blue;
+}
 .hotel-photo, .hotel-info, .rating {
-    
     margin-bottom:30px;
 }
 .hotel-photo {

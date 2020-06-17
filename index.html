@@ -39,26 +39,6 @@
         И мы покажем Вам лучшие предложения гостиниц в Седоне</p>
         </div>
       </section>
-      <form class="modal find-form" action="url" name="Поиск гостиницы в Седоне">
-        <fieldset>
-          <legend>Поиск гостиницы в Седоне</legend>
-      <label>Дата заезда
-        <input type="date" name="Дата заезда">
-      </label>
-      <label>Дата выезда
-        <input type="date" name="Дата выезда">
-      </label>
-      <label>Взрослые
-        <input type="number" name="Количество взрослых" min="0" max="10" step="1">
-      </label>
-      <label>Дети
-        <input type="number" name="Количество детей" min="0" max="10" step="1">
-      </label>
-      <label>
-        <input type="button" name="найти" value="найти">
-      </label>
-      </fieldset>
-      </form>
     </main>
     <footer class="main-footer">
       <section class="container">
@@ -78,5 +58,23 @@
         </div>
       </section>
     </footer>
+    <section class="modal">
+      <h2>Поиск гостиницы в Седоне</h2>
+      <form class="find-form" action="https://echo.htmlacademy.ru" method="post" name="Поиск гостиницы в Седоне">
+      <p class="form-item"><label>Дата заезда</label>
+        <input type="date" name="Дата заезда">
+      </p>
+      <p class="form-item"><label>Дата выезда</label>
+        <input type="date" name="Дата выезда">
+      </p>
+      <p class="form-item"><label>Взрослые</label>
+        <input type="number" name="Количество взрослых" min="0" max="10" step="1">
+      </p>
+      <p class="form-item"><label>Дети</label>
+        <input type="number" name="Количество детей" min="0" max="10" step="1">
+      </p>
+      <button class="button-find" type="submit">Найти</button>
+      </form>
+    </section>
   </body>
 </html>
