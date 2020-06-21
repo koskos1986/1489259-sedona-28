@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="body-page">
-    <header>
-      <nav class="navigation">
-        <div class="navigation-container">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body-page">
+  <header>
+    <nav class="navigation">
+      <a><img class="logo" src="img/logo.svg" alt="логотип штата"></a>
         <ul>
-          <li class="navigation-item"><a>Информация</a></li>
-          <li class="navigation-item"><a>Карта штата</a></li>
-          <li class="navigation-item logo"><a><img src="img/logo.svg" alt="логотип штата"></a></li>
-          <li class="navigation-item"><a>Фото и видео</a></li>
+          <li class="navigation-item"><a href="#">Информация</a></li>
+          <li class="navigation-item"><a href="#">Карта штата</a></li>
+          <li class="navigation-item"><a href="#">Фото и видео</a></li>
           <li class="navigation-item"><a href="catalog.html">Гостиницы</a></li>
         </ul>
-      </div>
-      </nav>
-    </header>
-    <main>
-      <section class="greetings">
-        <img src="img/background-photo-full.jpg" alt="фото штата">
-        <div class="greetings-content">
-        <h1>Седона-небольшой городок в Аризоне, заслуживающий большего!</h1>
+    </nav>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+    <section class="background-for-greetings">
+      <img src="img/background-photo-full.jpg" alt="фото штата">
+    </section>
+    <section class="greetings">
+      <div class="greetings-content">
+        <p>Седона – небольшой городок в Аризоне, заслуживающий большего!</p>
         <p>Рассмотрим 5 преимуществ, по которым Седона круче,чем Гранд Каньон!</p>
-        </div>
-      </section>
-      <section>
-        <div class="advantages">
-        </div>
-      </section>
-      <section class="proposal">
-        <div class="proposal-booking">
+      </div>
+    </section>
+    <section>
+      <div class="advantages">
+      </div>
+    </section>
+    <section class="proposal">
+      <div class="proposal-booking">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,
-        И мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        </div>
-      </section>
-    </main>
-    <footer class="main-footer">
-      <section class="container">
-        <div class="contacts">
-          <p>#visitsedona</p>
-          <a href="tel:+7(495)666-02-66"> тел:+7(495)666-02-66</a>
-        </div>
-        <div class="social-networks">
-          <ul>
-            <li class="social-networks-item"><a><!--Твиттер --><img src="img/twitter.svg"> </a></li>
-            <li class="social-networks-item"><a><!--Фейсбук--><img src="img/fb-icon.svg"> </a></li>
-            <li class="social-networks-item"><a><!--Ютуб--><img src="img/youtube.svg"> </a></li>
-          </ul>
-        </div>
-        <div class="developer">
-          <p>Website by </p><a href="https://htmlacademy.ru/study"><img src="img/logo-htmlacademy.svg" width="100px" height="50px" alt="Лого Академии"></a>
-        </div>
-      </section>
-    </footer>
-    <section class="modal">
-      <h2>Поиск гостиницы в Седоне</h2>
-      <form class="find-form" action="https://echo.htmlacademy.ru" method="post" name="Поиск гостиницы в Седоне">
+          И мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <section class="container">
+      <div class="contacts">
+        <p>#visitsedona</p>
+        <a href="tel:+7(495)666-02-66"> тел:+7(495)666-02-66</a>
+      </div>
+      <div class="social-networks">
+        <ul>
+          <li class="social-networks-item"><a>
+              <!--Твиттер --><img src="img/twitter.svg"> </a></li>
+          <li class="social-networks-item"><a>
+              <!--Фейсбук--><img src="img/fb-icon.svg"> </a></li>
+          <li class="social-networks-item"><a>
+              <!--Ютуб--><img src="img/youtube.svg"> </a></li>
+        </ul>
+      </div>
+      <div class="developer">
+        <p>Website by </p><a href="https://htmlacademy.ru/study"><img src="img/logo-htmlacademy.svg" width="100px"
+            height="50px" alt="Лого Академии"></a>
+      </div>
+    </section>
+  </footer>
+  <section class="modal">
+    <h2>Поиск гостиницы в Седоне</h2>
+    <form class="find-form" action="https://echo.htmlacademy.ru" method="post" name="Поиск гостиницы в Седоне">
       <p class="form-item"><label>Дата заезда</label>
         <input type="date" name="Дата заезда">
       </p>
@@ -74,7 +81,7 @@
         <input type="number" name="Количество детей" min="0" max="10" step="1">
       </p>
       <button class="button-find" type="submit">Найти</button>
-      </form>
-    </section>
-  </body>
+    </form>
+  </section>
+</body>
 </html>

@@ -1,325 +1,329 @@
 @font-face {
-   font-family: "PT Sans"; 
-   src: url("../fonts/ptsans.woff2") format("woff2"),
-        url("../fonts/ptsans.woff") format("woff"),
-        url("../fonts/ptsansbold.woff2") format("woff2"),
-        url("../fonts/ptsansbold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff"),
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 :root {
-    --basic-grey: #888888;
-    --basic-grey-light:#F2F2F2;
-    --basic-grey-dark: #666666;
-    --basic-black: #000000;
-    --basic-black-light: #333333;
-    --basic-white: #FFFFFF;
-    --basic-blue-light: #81B3D2;
-    --basic-blue: #669EC0;
-    --basic-blue-dark: #5496BD;
-    --basic-grey-rectangle: #EEEEEE;
-    --basic-brown: #604E43;
-    --basic-brown-light:#766357;
-    --basic-brown-dark: #503E33;
-    
+  --basic-grey: #888888;
+  --basic-grey-light: #f2f2f2;
+  --basic-grey-dark: #666666;
+  --basic-black: #000000;
+  --basic-black-light: #333333;
+  --basic-white: #ffffff;
+  --basic-blue-light: #81b3d2;
+  --basic-blue: #669ec0;
+  --basic-blue-dark: #5496bd;
+  --basic-grey-rectangle: #eeeeee;
+  --basic-brown: #604e43;
+  --basic-brown-light: #766357;
+  --basic-brown-dark: #503e33;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.rating {
+  height: 121px;
 }
 body {
-    font-family: "PT Sans", Arial, sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 26px;
-    text-transform: uppercase;
-    background-color: var(--basic-grey-light);
-    color: var(--basic-black);
-    max-width:1200px;
-    margin-left: auto;
-    margin-right: auto;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 26px;
+  text-transform: uppercase;
+  background-color: var(--basic-grey-light);
+  color: var(--basic-black);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .page {
-    height:100%;
+  height: 100%;
 }
 .body-page {
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    align-content: start;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 .navigation-container {
-    display:flex;
-    width:1200px;
-    flex-wrap:wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style-type: none;
-    margin-bottom: 0px;
+  display: flex;
+  width: 1200px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-bottom: 0px;
 }
-.navigation{
-    padding:0;
-    margin:0;
+.navigation {
+  padding: 0;
+  margin: 0;
 }
 .navigation-item {
-width:100%;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items:center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .navigation ul {
-    display:flex;
-    justify-content: space-around;
-    margin-left: 0px;
-    align-content: center;
-    padding:0;
-    margin: 0px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0px;
+  align-content: center;
+  padding: 0;
+  margin: 0px;
 }
-.navigation li{
-    background-color: var(--basic-white);
-    font: inherit;
-    font-weight: bold;
-    text-align: center;
-    list-style-type: none;
-} 
+.navigation li {
+  background-color: var(--basic-white);
+  font: inherit;
+  font-weight: bold;
+  text-align: center;
+  list-style-type: none;
+}
+.navigation a {
+  text-decoration: none;
+}
 .logo {
-    width:138px;
-    height: 70px;
+  width: 138px;
+  height: 70px;
 }
 .greetings {
-    background-color: var(--basic-white);
+  background-color: var(--basic-white);
 }
 .greetings-content h1 {
-    margin:0px;
-    max-width:470px;
-    min-height: 80px;
-    font-family: inherit;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 26px;
-    text-align: center;
+  margin: 0px;
+  max-width: 470px;
+  min-height: 80px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
 }
 .greetings-content p {
-    font-family: inherit;
-    margin: 0px;
-    min-height: 26px;
-    max-width: 524px;
-    text-align: center;
+  font-family: inherit;
+  margin: 0px;
+  min-height: 26px;
+  max-width: 524px;
+  text-align: center;
 }
 .greetings-content {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 .advantages {
-    background-color: var(--basic-white);
+  background-color: var(--basic-white);
 }
 .proposal {
-    background-color: var(--basic-white);
+  background-color: var(--basic-white);
 }
 .proposal-booking {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    max-width: 435px;
-    max-height: 157px;
-    margin-left: 383px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  max-width: 435px;
+  max-height: 157px;
+  margin-left: 383px;
 }
 .proposal h2 {
-    font: inherit;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 24px;
-    color: var(--basic-black);
+  font: inherit;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  color: var(--basic-black);
 }
 .proposal p {
-    font: inherit;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 21px;
-    color: var(--basic-black-light);
-    text-align: center;
+  font: inherit;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-black-light);
+  text-align: center;
 }
 .find-form {
-    background-color: var(--basic-white);
+  background-color: var(--basic-white);
 }
 .main-footer .container {
   background-color: var(--basic-white);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height:120px;
+  height: 120px;
 }
 .contacts {
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width:400px;
-    margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin-left: 0px;
 }
 .contacts p {
-    font: inherit;
-    font-weight: bold;
-    font-size: 21px;
-    color: var(--basic-black);
-    margin-top: 23px;
-    margin-bottom: 9px;
-    margin-left: 117px;
-    width: 166px;
+  font: inherit;
+  font-weight: bold;
+  font-size: 21px;
+  color: var(--basic-black);
+  margin-top: 23px;
+  margin-bottom: 9px;
+  margin-left: 117px;
+  width: 166px;
 }
 .contacts a {
-    font: inherit;
-    font-weight: bold;
-    font-size: 21px;
-    color: var(--basic-black);
-    text-decoration: none;
-    margin-left: 117px;
-    margin-bottom: 36px;
-    width:251px;
+  font: inherit;
+  font-weight: bold;
+  font-size: 21px;
+  color: var(--basic-black);
+  text-decoration: none;
+  margin-left: 117px;
+  margin-bottom: 36px;
+  width: 251px;
 }
 .social-networks {
-    outline: 2px solid red;
+  outline: 2px solid red;
 }
 .social-networks ul {
-    display: grid;
-    height: 120px;
-    grid-template-columns: 46px 46px 46px;
-    align-content: center;
-    column-gap: 6px;
-    justify-content: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding:0px;
+  display: grid;
+  height: 120px;
+  grid-template-columns: 46px 46px 46px;
+  align-content: center;
+  column-gap: 6px;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
 }
 .social-networks li {
-    list-style-type: none;
-    min-height:48px;
-    background-color: #669EC0;
+  list-style-type: none;
+  min-height: 48px;
+  background-color: #669ec0;
 }
 .developer {
-    display: flex;
+  display: flex;
 }
 .developer p {
-    font: inherit;
-    font-weight: normal;
+  font: inherit;
+  font-weight: normal;
 }
 /*modal*/
 .modal {
-    width: 568px;
-    height: 486px;
+  width: 568px;
+  height: 486px;
 }
 .modal h2 {
-    height: 86px;
-    margin:0px;
-    background-color: var(--basic-brown-light);
-    color: var(--basic-white);
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 26px;
-    text-align: center;
+  height: 86px;
+  margin: 0px;
+  background-color: var(--basic-brown-light);
+  color: var(--basic-white);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
 }
 .hotels-container {
-    display: grid;
-    grid-template-rows: 151px 151px 151px;
+  display: grid;
+  grid-template-rows: 151px 151px 151px;
 }
 .find-form {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
 }
-.button-find { 
-background-color: var(--basic-blue-light);
-color: #FFFFFF;
-font-weight: bold;
-font-size: 21px;
-line-height: 26px;
-text-transform: uppercase;
+.button-find {
+  background-color: var(--basic-blue-light);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
 }
 .form-item {
-    outline: 1px solid blue;
+  outline: 1px solid blue;
 }
-.hotel-photo, .hotel-info, .rating {
-    margin-bottom:30px;
+.hotel-photo,
+.hotel-info,
+.rating {
+  margin-bottom: 30px;
 }
 .hotel-photo {
-    margin-top: 30px;
-    height: 90px;
-    margin-right: 29px;
+  margin-top: 30px;
+  height: 90px;
+  margin-right: 29px;
 }
 .hotel-item {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width:1200px;
-    padding-left: 73px;
-    padding-right:73px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  padding-left: 73px;
+  padding-right: 73px;
 }
-.hotel-item, .rating {
-    background-color: var(--basic-white);
+.hotel-item,
+.rating {
+  background-color: var(--basic-white);
 }
 .hotel-info {
-    flex-grow:1;
-   align-self: baseline;
+  flex-grow: 1;
+  align-self: baseline;
 }
 .hotel-info p:first-child {
-    font-size:21px;
-    font-weight: bold;
+  font-size: 21px;
+  font-weight: bold;
 }
-.rating {
-    height: 121px;
-}
-
 .button {
-    font: inherit; 
-    font-weight: bold;
-    line-height: 21px;
-    color: var(--basic-white);
-    border:none;
-    text-transform: uppercase;
+  font: inherit;
+  font-weight: bold;
+  line-height: 21px;
+  color: var(--basic-white);
+  border: none;
+  text-transform: uppercase;
 }
 .details {
-width:110px;
-height:27px;
-background-color: var(--basic-blue-light);
+  width: 110px;
+  height: 27px;
+  background-color: var(--basic-blue-light);
 }
 .details:hover,
 .details:focus {
-    background-color: var(--basic-blue);
+  background-color: var(--basic-blue);
 }
 .details:active {
-    background-color: var(--basic-blue-dark);
+  background-color: var(--basic-blue-dark);
 }
 .booking {
-width:142px;
-height: 27px;
-background-color: var(--basic-brown-light);
+  width: 142px;
+  height: 27px;
+  background-color: var(--basic-brown-light);
 }
 .booking:hover,
 .booking:focus {
-    background-color: var(--basic-brown);
+  background-color: var(--basic-brown);
 }
 .booking:active {
-    background-color: var(--basic-brown-dark);
+  background-color: var(--basic-brown-dark);
 }
 .rating p {
-width:110px;
-height:27px;
-background-color: var(--basic-grey-light);
-color: var(--basic-grey-dark);
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 21px;
+  width: 110px;
+  height: 27px;
+  background-color: var(--basic-grey-light);
+  color: var(--basic-grey-dark);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
 }
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0 0 0 0)
-  }
