@@ -21,6 +21,7 @@
   --basic-brown: #604e43;
   --basic-brown-light: #766357;
   --basic-brown-dark: #503e33;
+  --basic-transparent-footer: rgba(255, 255, 255, 0.9);
 }
 .visually-hidden {
   position: absolute;
@@ -100,7 +101,7 @@ body {
 .background-for-greetings {
   position: relative;
   min-height: 455px;
-  background-image: url("/img/background-photo-full.jpg");
+  background-image: url("../img/background-photo-full.jpg");
   background-size: cover;
   background-color: linear-gradient(#f69d3c, #3f87a6); /*проверить почему не применяется градиент*/
 }
@@ -109,7 +110,7 @@ body {
   top: 455px;
   width: 100%;
   height: 57px;
-  background-image: url("/img/background-down.jpg");
+  background-image: url("../img/background-down.jpg");
   background-color: linear-gradient(#f69d3c, #3f87a6);
 }
 .greeting {
@@ -122,6 +123,9 @@ body {
 }
 /*Скорее всего стили ниже надо будет убрать*/
 .greetings-content {
+  padding-top: 97px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 470px;
   min-height: 80px;
   font-family: inherit;
@@ -168,8 +172,12 @@ body {
 .find-form {
   background-color: var(--basic-white);
 }
+.main-footer {
+  background-color: var(--basic-transparent-footer);
+  margin-top: -120px;
+  z-index: 2;
+}
 .main-footer .container {
-  background-color: var(--basic-white);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   height: 120px;
