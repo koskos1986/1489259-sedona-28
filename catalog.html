@@ -22,7 +22,81 @@
       </header>
       <main class="hotels-container">
         <h1 class="visually-hidden">Подбор отелей в Седоне</h1>
-        <div class="hotel-item">
+        <section class="filters-of-hotels">
+          <h2 class="visually-hidden">Фильтр отелей Седоны</h2>
+          <form class="form-filter" action="https://echo.htmlacademy.ru" class="filter-form" target="blank">
+          <div class="filter-wrapper">
+            <legend class="filter-name">Инфраструктура</legend>
+              <fieldset class="filter">
+              <ul class="list filter-list">
+                <li class="filter-list-item">
+                  <input type="checkbox" class="filter-checkbox" name="pool" id="item-pool" aria-label="Выбрать бассейн" checked>
+                  <label for="item-pool">Бассейн</label>
+                </li>
+                <li class="filter-list-item">
+                  <input type="checkbox" class="filter-checkbox" name="parking" id="item-parking" aria-label="Выбрать парковку">
+                  <label for="item-parking">Парковка</label>
+                </li>
+                <li class="filter-list-item">
+                  <input type="checkbox" class="filter-checkbox" name="wi-fi" id="item-wi-fi" aria-label="Выбрать wi-fi">
+                  <label for="item-wi-fi">WI-FI</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter">
+              <legend class="filter-name">Тип жилья</legend>
+              <ul class="list filter-list">
+                <li class="filter-list-item">
+                  <input type="checkbox" class="filter-checkbox" name="inn" id="item-inn" aria-label="Выбрать гостиницу" checked>
+                  <label for="item-inn">Гостиница</label>
+                </li>
+                <li class="filter-list-item">
+                  <input type="checkbox" class="filter-checkbox" name="hotel" id="item-hotel" aria-label="Выбрать мотель" checked>
+                  <label for="item-hotel">Мотель</label>
+                </li>
+                <li class="filter-list-item">
+                  <input type="checkbox" class="filter-checkbox" name="aparts" id="item-aparts" aria-label="Выбрать аппартаменты" checked>
+                  <label for="item-aparts">Аппартаменты</label>
+                </li>
+                </ul>
+            </fieldset>
+          </div>
+          <div class="filter-cost">
+            <label class="cost-per-day">Стоимость в сутки (р)</label>
+            <div class="interval-cost">
+              <label for="min-cost"></label>
+              <input type="text" class="min-cost" name="min-cost" id="min-cost" placeholder="От 0" aria-label="Ввести минимальную стоимость">
+              <label for="max-cost"></label>
+              <input type="text" class="max-cost" name="max-cost" id="max-cost" placeholder="До 3000" aria-label="Ввести максимальную стоимость">
+            </div>
+            <div class="slider">
+              <div class="side-slider"></div>
+              <div class="main-slider"></div>
+              <button class="button left-filter-slider-button"></button>
+              <button class="button right-filter-slider-button"></button>
+            </div>
+            <button class="button filter-button" type="submit" aria-label="Показать варианты гостиниц">Показать</button>
+          </div>
+          </form>
+        </section>
+        <aside class="filter-sorting">
+          <div class="find"></div>
+          <div class="sorting">
+            <span class="sorting-name">Сортировка</span>
+            <ul class="list sorting-types-list">
+              <li class="sorting-type-item">По цене</li>
+              <li class="sorting-type-item">По типу</li>
+              <li class="sorting-type-item">По рейтингу</li>
+            </ul>
+          </div>
+          <div class="sorting-switcher">
+            <button class="control-arrow"></button>
+            <button class="control-arrow-active"></button>
+          </div>
+        </aside>
+        <section class="hotels">
+          <h2 class="visually-hidden">Список отелей Седоны</h2>
+        <article class="hotel-item">
           <div class="hotel-photo">
             <img src="img/thumb-amara-resort.jpg" alt="Отель у подножия горы">
           </div>
@@ -36,8 +110,8 @@
             <span>*</span><span>*</span><span>*</span><span>*</span> <!--Звезды-->
             <p>Рейтинг: 8.5</p>
           </div>
-        </div>
-        <div class="hotel-item">
+        </article>
+        <article class="hotel-item">
           <div class="hotel-photo">
             <img src="img/thumb-desert-quall.jpg" alt="Классический американский двухэтажный отель">
           </div>
@@ -51,8 +125,8 @@
             <span>*</span><span>*</span><span>*</span> <!--Звезды-->
               <p>Рейтинг: 8.9</p>
           </div>
-        </div>
-        <div class="hotel-item">
+        </article>
+        <article class="hotel-item">
           <div class="hotel-photo">
             <img src="img/thumb-villas-diablo.jpg" alt="Уютная вилла в тени деревьев">
           </div>
@@ -66,7 +140,8 @@
             <span>*</span><span>*</span> <!--Звезды-->
               <p>Рейтинг: 9.2</p>
           </div>
-        </div>
+        </article>
+      </section>
       </main>
       <footer class="main-footer">
         <section class="container">

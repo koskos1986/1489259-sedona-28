@@ -43,6 +43,7 @@ body {
   line-height: 26px;
   text-transform: uppercase;
   background-color: var(--basic-grey-light);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   color: var(--basic-black);
   max-width: 1200px;
   margin-left: auto;
@@ -62,6 +63,16 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.button {
+  font: inherit;
+  font-weight: bold;
+  line-height: 21px;
+  color: var(--basic-white);
+  border: none;
+  text-transform: uppercase;
+}
+
 .main-header {
   min-height: 56px;
   background-color: var(--basic-white);
@@ -118,29 +129,144 @@ body {
   left: 371px;
   top: 77px;
 }
-.advantages {
-  background-color: var(--basic-white);
-}
 /*Скорее всего стили ниже надо будет убрать*/
 .greetings-content {
   padding-top: 97px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 470px;
-  min-height: 80px;
+
   font-family: inherit;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
 }
-.greetings-content p {
-  min-height: 26px;
-  max-width: 524px;
+.greetings-content-main {
+  margin-bottom: 17px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 470px;
+  min-height: 80px;
   text-align: center;
+}
+.greetings-content-item {
+  margin-left: 270px;
+  margin-right: 300px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
 }
 .advantages {
   background-color: var(--basic-white);
+}
+.list-of-advantages {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feature-picture {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.feature-item-picture {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  background-color: var(--basic-blue-light);
+  color: var(--basic-white);
+}
+.feature-item-picture:first-child {
+  padding-top: 47px;
+  padding-right: 54px;
+  padding-bottom: 9px; /*проверить почему выпадает*/
+  padding-left: 52px;
+}
+.feature-item-picture:last-child {
+  padding-top: 50px;
+  padding-right: 49px;
+  padding-bottom: 6px;
+  padding-right: 50px;
+}
+.name-part-advantages,
+.advantage-title-special,
+.advantage-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+.advantages-item {
+  width: 400px;
+  height: 256px;
+  background-color: var(--basic-grey-rectangle);
+}
+.advantage-number,
+.advantage-number-special {
+  margin-top: 25px;
+  margin-bottom: 23px;
+  text-align: center;
+}
+.part-of-advantages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.item-part-advantages {
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+}
+.item-part-advantages:first-child {
+  padding-top: 60px;
+  padding-right: 62px;
+  padding-bottom: 82px;
+  padding-left: 73px;
+}
+.item-part-advantages:nth-child(2) {
+  padding-top: 61px;
+  padding-right: 59px;
+  padding-bottom: 82px;
+  padding-left: 61px;
+}
+.item-part-advantages:last-child {
+  padding-top: 55px;
+  padding-right: 65px;
+  padding-bottom: 81px;
+  padding-left: 59px;
+}
+.picture-house {
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+}
+.picture-food {
+  width: 75px;
+  height: 70px;
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+}
+.picture-souvenirs {
+  width: 64px;
+  height: 77px;
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+}
+.image-part-advantages {
+  margin-left: auto;
+  margin-right: auto;
+}
+.name-part-advantages {
+  display: inline-block;
+  vertical-align: auto;
+  margin-top: 28px;
+  margin-bottom: 25px;
+}
+.advantage-wrapper {
+  display: block;
+  padding-top: 47px;
+  padding-right: 84px;
+  padding-bottom: 54px;
+  padding-left: 96px;
+  text-align: center;
 }
 .proposal {
   background-color: var(--basic-white);
@@ -152,16 +278,17 @@ body {
   align-items: center;
   max-width: 435px;
   max-height: 157px;
-  margin-left: 383px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.proposal h2 {
+.proposal-title {
   font: inherit;
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
   color: var(--basic-black);
 }
-.proposal p {
+.proposal-content {
   font: inherit;
   font-weight: normal;
   font-size: 14px;
@@ -169,10 +296,25 @@ body {
   color: var(--basic-black-light);
   text-align: center;
 }
+.form-wrapper {
+  max-width: 568px;
+  max-height: 481px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button-form {
+  width: 568px;
+  height: 86px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  background-color: var(--basic-brown-light);
+}
 .find-form {
   background-color: var(--basic-white);
 }
-.main-footer {
+.index {
   background-color: var(--basic-transparent-footer);
   margin-top: -120px;
   z-index: 2;
@@ -180,13 +322,12 @@ body {
 .main-footer .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 120px;
+  min-height: 120px;
 }
 .contacts {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  max-width: 400px;
+  align-items: flex-start;
 }
 .contacts p {
   font-weight: bold;
@@ -195,7 +336,7 @@ body {
   margin-top: 23px;
   margin-bottom: 9px;
   margin-left: 117px;
-  width: 166px;
+  width: auto;
 }
 .contacts a {
   font: inherit;
@@ -205,34 +346,53 @@ body {
   text-decoration: none;
   margin-left: 117px;
   margin-bottom: 36px;
-  width: 251px;
+  width: auto;
 }
-.social-networks {
-  outline: 2px solid red;
-}
-.social-networks ul {
+.social-networks-list {
   display: grid;
   height: 120px;
   grid-template-columns: 46px 46px 46px;
   align-content: center;
   column-gap: 6px;
-  /*сбросить служебным классом для списков*/
   justify-content: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
 }
-.social-networks li {
-  list-style-type: none;
-  min-height: 48px;
+.social-networks-item{
+  box-sizing: border-box;
+  height: 48px;
+  width: 46px;
   background-color: var(--basic-blue);
+}
+.link-twitter {
+  padding-top: 16px;
+  padding-right: 15px;
+  padding-bottom: 16px;
+  padding-left: 15px;
+}
+.link-facebook {
+  padding-top: 13px;
+  padding-right: 17px;
+  padding-bottom: 13px;
+  padding-left: 17px;
+}
+.link-youtube {
+  padding-top: 16px;
+  padding-right: 13px;
+  padding-bottom: 16px;
+  padding-left: 13px;
 }
 .developer {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-.developer p {
-  font: inherit;
+.developer-text {
   font-weight: normal;
+}
+.developer-link {
+width: 115px;
+height: 41px;
+margin-right: 103px;
+margin-left: 6px;
 }
 /*modal*/
 .modal {
@@ -249,6 +409,27 @@ body {
   line-height: 26px;
   text-align: center;
 }
+.filter {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.filters-of-hotels {
+  min-height: 217px; /*что то с высотой*/
+}
+.form-filter {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 1200px;
+  min-height: 217px;
+  background-color: #f2f2f2;
+  background-image: url("../img/background-filter.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.filter-wrapper {
+  display: flex;
+}
 .hotels-container {
   display: grid;
   grid-template-rows: 151px 151px 151px;
@@ -262,6 +443,7 @@ body {
   font-size: 14px;
   line-height: 26px;
 }
+
 .button-find {
   background-color: var(--basic-blue-light);
   color: var(--basic-white);
@@ -270,9 +452,7 @@ body {
   line-height: 26px;
   text-transform: uppercase;
 }
-.form-item {
-  outline: 1px solid blue;
-}
+
 .hotel-photo,
 .hotel-info,
 .rating {
@@ -303,14 +483,7 @@ body {
   font-size: 21px;
   font-weight: bold;
 }
-.button {
-  font: inherit;
-  font-weight: bold;
-  line-height: 21px;
-  color: var(--basic-white);
-  border: none;
-  text-transform: uppercase;
-}
+
 .details {
   width: 110px;
   height: 27px;
