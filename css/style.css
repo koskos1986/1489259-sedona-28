@@ -22,6 +22,7 @@
   --basic-brown-light: #766357;
   --basic-brown-dark: #503e33;
   --basic-transparent-footer: rgba(255, 255, 255, 0.9);
+  --basic-grey-disabled: #6A6A6A;
 }
 .visually-hidden {
   position: absolute;
@@ -80,6 +81,8 @@ body {
 .navigation {
   position: relative;
 }
+/* временно закоментил для пробы на гридах
+
 .navigation-item {
   width: 100%;
   display: flex;
@@ -89,17 +92,26 @@ body {
 }
 .navigation ul {
   display: flex;
+}*/
+.list-navigation {
+  display: grid;
+  grid-template-columns: 227px 1fr 1fr 227px;
+  grid-template-rows: auto;
+  margin-left: 72px;
+  margin-right: 72px;
+  align-content: center;
+}
+.navigation-item-left {
+  text-align: left;
+}
+.navigation-item-right {
+  text-align: right;
 }
 .navigation li {
   font: inherit;
   font-weight: bold;
-  text-align: center;
   padding-top: 15px;
 }
-/*для позиционирования меню(слева и справа)
-.navigation-item:nth-child() {
-}
-*/
 .navigation a {
   text-decoration: none;
   color: var(--basic-black);
@@ -111,28 +123,29 @@ body {
 }
 .background-for-greetings {
   position: relative;
-  min-height: 455px;
+  min-height: 512px;
   background-image: url("../img/background-photo-full.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-color: linear-gradient(#f69d3c, #3f87a6); /*проверить почему не применяется градиент*/
 }
-.wrapper-background-down {
+.background-for-greetings::after {
+  display: block;
   position: absolute;
-  top: 455px;
-  width: 100%;
-  height: 57px;
+  top:455px;
+  content: "";
   background-image: url("../img/background-down.jpg");
-  background-color: linear-gradient(#f69d3c, #3f87a6);
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 57px;
 }
 .greeting {
   position: absolute;
   left: 371px;
   top: 77px;
 }
-/*Скорее всего стили ниже надо будет убрать*/
 .greetings-content {
-  padding-top: 97px;
-
+  padding-top: 1px;
   font-family: inherit;
   font-weight: bold;
   font-size: 21px;
@@ -141,6 +154,7 @@ body {
 }
 .greetings-content-main {
   margin-bottom: 17px;
+  margin-top: 39px;
   margin-left: auto;
   margin-right: auto;
   max-width: 470px;
@@ -148,7 +162,9 @@ body {
   text-align: center;
 }
 .greetings-content-item {
+  margin-top: 16px;
   margin-left: 270px;
+  margin-bottom: 51px;
   margin-right: 300px;
   font-style: normal;
   font-weight: normal;
@@ -430,6 +446,164 @@ margin-left: 6px;
 .filter-wrapper {
   display: flex;
 }
+.filter {
+  margin-top: 25px;
+  margin-left: 72px;
+  padding: 0;
+}
+.filter:last-child {
+  margin-left: 119px;
+}
+.filter-name {
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+.filter-list-item {
+  margin-bottom: 25px;
+  margin-left: 39px;
+}
+.filter-checkbox {
+  margin-right: 13px;
+}
+.filter-list-item label{ /*может и убрать*/
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: var(--basic-white);
+  user-select: none;
+}
+.filter-checkbox + label::before {
+  position: absolute;
+  top: 0;
+  left: -39px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  content: "";
+}
+.filter-checkbox:hover + label::before {
+  cursor: pointer;
+}
+.filter-checkbox:checked + label::before {
+  position: absolute;
+  top: 0;
+  left: -39px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
+  content: "";
+}
+.filter-checkbox:disabled + label::before {
+  position: absolute;
+  top: 0;
+  left: -39px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off-disabled.svg");
+  content: "";
+}
+.filter-checkbox:checked:disabled + label::before {
+  position: absolute;
+  top: 0;
+  left: -39px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-on-disabled.svg");
+  content: "";
+}
+.filter-checkbox:disabled + label {
+  color: var(--basic-grey-disabled);
+}
+.filter-cost {
+  position: relative;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+.cost-per-day {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+.interval-cost {
+  display: flex;
+  width: 317px;
+  margin-top: 11px;
+  margin-bottom: 11px;
+  text-align: center;
+  color: var(--basic-white);
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.min-cost::placeholder,
+.max-cost::placeholder {
+  color: var(--basic-white);
+  opacity: 1;
+}
+.min-cost:focus::placeholder,
+.max-cost:focus::placeholder {
+  color: transparent;
+}
+.min-cost,
+.max-cost {
+  height: 32px;
+  padding-top: 0;
+  padding-right: 4px;
+  padding-bottom: 0;
+  padding-left: 4px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: transparent;
+  overflow: hidden;
+  border: none;
+}
+.min-cost {
+  width: 154px;
+  margin-right: 4px;
+}
+.max-cost {
+  width: 155px;
+}
+.filter-separate-line {
+  position: absolute;
+  top: 44px;
+  left: 156px;
+  display: block;
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+}
+/*Сюда добавить стилизацию слайдера*/
+.filter-button {
+  width: 137px;
+  height: 36px;
+  margin-left: 84px;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+.filter-button:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  cursor: pointer;
+}
+
+/*Сортировка*/
 .hotels-container {
   display: grid;
   grid-template-rows: 151px 151px 151px;

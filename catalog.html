@@ -26,19 +26,19 @@
           <h2 class="visually-hidden">Фильтр отелей Седоны</h2>
           <form class="form-filter" action="https://echo.htmlacademy.ru" class="filter-form" target="blank">
           <div class="filter-wrapper">
-            <legend class="filter-name">Инфраструктура</legend>
-              <fieldset class="filter">
+            <fieldset class="filter">
+              <legend class="filter-name">Инфраструктура</legend>
               <ul class="list filter-list">
                 <li class="filter-list-item">
-                  <input type="checkbox" class="filter-checkbox" name="pool" id="item-pool" aria-label="Выбрать бассейн" checked>
+                  <input type="checkbox" class="filter-checkbox visually-hidden" name="pool" id="item-pool" aria-label="Выбрать бассейн" checked>
                   <label for="item-pool">Бассейн</label>
                 </li>
                 <li class="filter-list-item">
-                  <input type="checkbox" class="filter-checkbox" name="parking" id="item-parking" aria-label="Выбрать парковку">
+                  <input type="checkbox" class="filter-checkbox visually-hidden" name="parking" id="item-parking" aria-label="Выбрать парковку">
                   <label for="item-parking">Парковка</label>
                 </li>
                 <li class="filter-list-item">
-                  <input type="checkbox" class="filter-checkbox" name="wi-fi" id="item-wi-fi" aria-label="Выбрать wi-fi">
+                  <input type="checkbox" class="filter-checkbox visually-hidden" name="wi-fi" id="item-wi-fi" aria-label="Выбрать wi-fi">
                   <label for="item-wi-fi">WI-FI</label>
                 </li>
               </ul>
@@ -47,15 +47,15 @@
               <legend class="filter-name">Тип жилья</legend>
               <ul class="list filter-list">
                 <li class="filter-list-item">
-                  <input type="checkbox" class="filter-checkbox" name="inn" id="item-inn" aria-label="Выбрать гостиницу" checked>
+                  <input type="checkbox" class="filter-checkbox visually-hidden" name="inn" id="item-inn" aria-label="Выбрать гостиницу" checked>
                   <label for="item-inn">Гостиница</label>
                 </li>
                 <li class="filter-list-item">
-                  <input type="checkbox" class="filter-checkbox" name="hotel" id="item-hotel" aria-label="Выбрать мотель" checked>
+                  <input type="checkbox" class="filter-checkbox visually-hidden" name="hotel" id="item-hotel" aria-label="Выбрать мотель" checked>
                   <label for="item-hotel">Мотель</label>
                 </li>
                 <li class="filter-list-item">
-                  <input type="checkbox" class="filter-checkbox" name="aparts" id="item-aparts" aria-label="Выбрать аппартаменты" checked>
+                  <input type="checkbox" class="filter-checkbox visually-hidden" name="aparts" id="item-aparts" aria-label="Выбрать аппартаменты" checked>
                   <label for="item-aparts">Аппартаменты</label>
                 </li>
                 </ul>
@@ -64,10 +64,11 @@
           <div class="filter-cost">
             <label class="cost-per-day">Стоимость в сутки (р)</label>
             <div class="interval-cost">
-              <label for="min-cost"></label>
+              <label class="visually-hidden" for="min-cost"></label>
               <input type="text" class="min-cost" name="min-cost" id="min-cost" placeholder="От 0" aria-label="Ввести минимальную стоимость">
-              <label for="max-cost"></label>
+              <label class="visually-hidden" for="max-cost"></label>
               <input type="text" class="max-cost" name="max-cost" id="max-cost" placeholder="До 3000" aria-label="Ввести максимальную стоимость">
+              <div class="filter-separate-line"></div>
             </div>
             <div class="slider">
               <div class="side-slider"></div>
@@ -80,7 +81,9 @@
           </form>
         </section>
         <aside class="filter-sorting">
-          <div class="find"></div>
+          <div class="find">
+            <span class="finding">Найдено: 3</span>
+          </div>
           <div class="sorting">
             <span class="sorting-name">Сортировка</span>
             <ul class="list sorting-types-list">
