@@ -9,15 +9,21 @@
     <body class="body-page">
       <header class="main-header">
         <nav class="navigation">
-          <a href="index.html"><img class="logo" src="img/logo.svg" width="138px" height="70px" alt="логотип штата"></a>
-          <div class="navigation-container">
-            <ul class="list">
-              <li class="navigation-item"><a href="#">Информация</a></li>
-              <li class="navigation-item"><a href="#">Фото и видео</a></li>
-              <li class="navigation-item"><a href="#">Карта штата</a></li>
-              <li class="navigation-item"><a href="#">Гостиницы</a></li>
+          <a><img class="logo" src="img/logo.svg" width="138px" height="70px" alt="логотип штата"></a>
+            <ul class="list list-navigation">
+              <li class="navigation-item navigation-item-left">
+                <a class="navigation-item-link" href="#">Информация</a>
+              </li>
+              <li class="navigation-item navigation-item-left">
+                <a class="navigation-item-link" href="#">Фото и видео</a>
+              </li>
+              <li class="navigation-item navigation-item-right">
+                <a class="navigation-item-link" href="#">Карта штата</a>
+              </li>
+              <li class="navigation-item navigation-item-right">
+                <a class="navigation-item-link" href="catalog.html">Гостиницы</a>
+              </li>
             </ul>
-          </div>
         </nav>
       </header>
       <main class="hotels-container">
@@ -73,8 +79,12 @@
             <div class="slider">
               <div class="side-slider"></div>
               <div class="main-slider"></div>
-              <button class="button left-filter-slider-button"></button>
-              <button class="button right-filter-slider-button"></button>
+              <button class="slider-button">
+                <span class="round"></span>
+              </button>
+              <button class="slider-button">
+                <span class="round"></span>
+              </button>
             </div>
             <button class="button filter-button" type="submit" aria-label="Показать варианты гостиниц">Показать</button>
           </div>
@@ -85,33 +95,46 @@
             <span class="finding">Найдено: 3</span>
           </div>
           <div class="sorting">
-            <span class="sorting-name">Сортировка</span>
+            <span class="sorting-name">Сортировка:</span>
             <ul class="list sorting-types-list">
-              <li class="sorting-type-item">По цене</li>
-              <li class="sorting-type-item">По типу</li>
-              <li class="sorting-type-item">По рейтингу</li>
+              <li class="sorting-type-item">
+                <button type="button" class="button sorting-button sorting-button-active" aria-label="Сортировать по цене">По цене</button>
+              </li>
+              <li class="sorting-type-item">
+                <button type="button" class="button sorting-button" aria-label="Сортировать по типу">По типу</button>
+              </li>
+              <li class="sorting-type-item">
+                <button type="button" class="button sorting-button" aria-label="сортировать по рейтингу">По рейтингу</button>
+              </li>
             </ul>
           </div>
           <div class="sorting-switcher">
-            <button class="control-arrow"></button>
-            <button class="control-arrow-active"></button>
+            <button class="control-arrow">
+              <svg></svg>
+            </button>
+            <button class="control-arrow control-arrow-active"></button>
           </div>
         </aside>
         <section class="hotels">
           <h2 class="visually-hidden">Список отелей Седоны</h2>
         <article class="hotel-item">
-          <div class="hotel-photo">
-            <img src="img/thumb-amara-resort.jpg" alt="Отель у подножия горы">
-          </div>
+          <img src="img/thumb-amara-resort.jpg" class="hotel-photo" alt="Отель у подножия горы">
           <div class="hotel-info">
-            <p>Amara resort & SPA</p>
-            <p>Гостинница от 4000</p>
-            <button type="button" class="button details">Подробнее</button>
-            <button type="button" class="button booking">Забронировать</button>
+            <h3 class="hotel-title">Amara resort & SPA</h3>
+            <div class="hotel-info-wrapper">
+              <div class="hotel-info-content-wrapper">
+                <p class="hotel-info-content">Гостиница</p>
+                <a class="button details" aria-label="Показать подробности">Подробнее</a>
+              </div>
+              <div class="hotel-info-content-wrapper">
+                <p class="hotel-info-content">от 4000 р.</p>
+                <a class="button booking" aria-label="Перейти к бронированию">Забронировать</a>
+              </div>
+            </div>
           </div>
           <div class="rating">
-            <span>*</span><span>*</span><span>*</span><span>*</span> <!--Звезды-->
-            <p>Рейтинг: 8.5</p>
+            <span class="hotel-rating">*</span>
+            <span class="hotel-rating-text">Рейтинг: 8.5</span>
           </div>
         </article>
         <article class="hotel-item">
@@ -147,22 +170,35 @@
       </section>
       </main>
       <footer class="main-footer">
-        <section class="container">
+        <div class="container">
           <div class="contacts">
             <p>#visitsedona</p>
-            <a href="tel:+7(495)666-02-66"> тел:+7(495)666-02-66</a>
+            <a href="tel: +7(495) 666-02-66" aria-label="Позвонить по телефону"> тел: +7(495) 666-02-66</a>
           </div>
-          <div class="social-networks">
             <ul class="list social-networks-list">
-              <li class="social-networks-item"><a><!--Твиттер --><img src="img/twitter.svg"> </a></li>
-              <li class="social-networks-item"><a><!--Фейсбук--><img src="img/fb-icon.svg"> </a></li>
-              <li class="social-networks-item"><a><!--Ютуб--><img src="img/youtube.svg"> </a></li>
+              <li class="social-networks-item">
+                <a href="#" class="social-link">
+                  <img class="link-twitter" width="17" height="17" src="img/twitter.svg" aria-label="Переход на Twitter">
+                </a>
+              </li>
+              <li class="social-networks-item">
+                <a href="#" class="social-link">
+                  <img class="link-facebook" width="12" height="22" src="img/fb-icon.svg"aria-label="Переход на Facebook">
+                </a>
+              </li>
+              <li class="social-networks-item">
+                <a href="#" class="social-link">
+                  <img class="link-youtube" width="20" height="16" src="img/youtube.svg"aria-label="Переход на Youtube">
+                </a>
+              </li>
             </ul>
-          </div>
           <div class="developer">
-            <p>Website by </p><a href="https://htmlacademy.ru/study"><img src="img/logo-htmlacademy.svg" width="100px" height="50px" alt="Лого Академии"></a>
+            <p class="developer-text">Website by </p>
+            <a class="developer-link" href="https://htmlacademy.ru/study" aria-label="Переход на HTML Academy">
+              <img src="img/logo-htmlacademy.svg" width="100px" height="50px" alt="Лого Академии">
+            </a>
           </div>
-        </section>
+        </div>
       </footer>
     </body>
 </html>
