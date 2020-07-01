@@ -11,19 +11,19 @@
   <body class="body-page">
     <header class="main-header">
       <nav class="navigation">
-        <a href="index.html"><img class="logo" src="img/logo.svg" width="138" height="70" alt="логотип штата"></a>
+        <a class="logo" href="index.html"><img src="img/logo.svg" width="138" height="70" alt="логотип штата"></a>
         <ul class="list list-navigation">
-          <li class="navigation-item navigation-item-left">
+          <li class="navigation-item">
             <a class="navigation-item-link" href="#">Информация</a>
           </li>
-          <li class="navigation-item navigation-item-left">
+          <li class="navigation-item">
             <a class="navigation-item-link" href="#">Фото и видео</a>
           </li>
-          <li class="navigation-item navigation-item-right">
+          <li class="navigation-item">
             <a class="navigation-item-link" href="#">Карта штата</a>
           </li>
-          <li class="navigation-item navigation-item-right">
-            <a class="navigation-item-link" href="catalog.html">Гостиницы</a>
+          <li class="navigation-item">
+            <a class="navigation-item-link navigation-item-link-active" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -32,7 +32,7 @@
       <h1 class="visually-hidden">Подбор отелей в Седоне</h1>
       <section class="filters-of-hotels">
         <h2 class="visually-hidden">Фильтр отелей Седоны</h2>
-        <form class="form-filter" action="https://echo.htmlacademy.ru" class="filter-form" target="blank">
+        <form class="form-filter" action="https://echo.htmlacademy.ru" target="blank">
           <div class="filter-wrapper">
             <fieldset class="filter">
               <legend class="filter-name">Инфраструктура</legend>
@@ -72,21 +72,21 @@
           <div class="filter-cost">
             <label class="cost-per-day">Стоимость в сутки (р)</label>
             <div class="interval-cost">
-              <label class="visually-hidden" for="min-cost"></label>
-              <input class="min-cost" type="text" name="min-cost" id="min-cost" placeholder="От 0" aria-label="Ввести минимальную стоимость"/>
-              <label class="visually-hidden" for="max-cost"></label>
-              <input class="max-cost" type="text" name="max-cost" id="max-cost" placeholder="До 3000" aria-label="Ввести максимальную стоимость"/>
+              <label class="visually-hidden" for="min-cost">Ввести минимальную стоимость</label>
+              <input class="min-cost" type="number" name="min-cost" id="min-cost" placeholder="От 0" min="0" max="3000"/>
+              <label class="visually-hidden" for="max-cost">Ввести максимальную стоимость</label>
+              <input class="max-cost" type="number" name="max-cost" id="max-cost" placeholder="До 3000" min="0" max="3000"/>
               <div class="filter-separate-line"></div>
             </div>
             <div class="slider">
               <div class="side-slider"></div>
               <div class="main-slider"></div>
-              <button class="slider-button">
+              <div class="slider-button">
                 <span class="round"></span>
-              </button>
-              <button class="slider-button">
+              </div>
+              <div class="slider-button">
                 <span class="round"></span>
-              </button>
+              </div>
             </div>
             <button class="button filter-button" type="submit" aria-label="Показать варианты гостиниц">Показать</button>
           </div>
@@ -112,9 +112,15 @@
         </div>
         <div class="sorting-switcher">
           <button class="control-arrow">
-            <svg></svg>
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 0L0 10H11L5.5 0Z" fill="currentColor"/>
+              </svg>
           </button>
-          <button class="control-arrow control-arrow-active"></button>
+          <button class="control-arrow control-arrow-active">
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 0L0 10H11L5.5 0Z" fill="currentColor"/>
+              </svg>
+          </button>
         </div>
       </aside>
       <section class="hotels">
@@ -186,22 +192,22 @@
       <div class="container">
         <div class="contacts">
           <p>#visitsedona</p>
-          <a href="tel: +74956660266" aria-label="Позвонить по телефону">тел: +7(495) 666-02-66</a>
+          <a href="tel:+74956660266" aria-label="Позвонить по телефону">тел: +7(495) 666-02-66</a>
         </div>
         <ul class="list social-networks-list">
           <li class="social-networks-item">
             <a class="social-link" href="#">
-              <img class="link-twitter" width="17" height="17" src="img/twitter.svg" aria-label="Переход на Twitter"/>
+              <img class="link-twitter" width="17" height="17" src="img/twitter.svg" alt="Ссылка перехода на Twitter"/>
             </a>
           </li>
           <li class="social-networks-item">
             <a class="social-link" href="#">
-              <img class="link-facebook" width="12" height="22" src="img/fb-icon.svg" aria-label="Переход на Facebook"/>
+              <img class="link-facebook" width="12" height="22" src="img/fb-icon.svg" alt="Ссылка перехода на Facebook"/>
             </a>
           </li>
           <li class="social-networks-item">
             <a class="social-link" href="#">
-              <img class="link-youtube" width="20" height="16" src="img/youtube.svg" aria-label="Переход на Youtube"/>
+              <img class="link-youtube" width="20" height="16" src="img/youtube.svg" alt="Ссылка перехода на Youtube"/>
             </a>
           </li>
         </ul>
