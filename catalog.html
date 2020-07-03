@@ -23,7 +23,7 @@
             <a class="navigation-item-link" href="#">Карта штата</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-item-link navigation-item-link-active" href="catalog.html">Гостиницы</a>
+            <a class="navigation-item-link navigation-item-link-active">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -73,9 +73,9 @@
             <label class="cost-per-day">Стоимость в сутки (р)</label>
             <div class="interval-cost">
               <label class="visually-hidden" for="min-cost">Ввести минимальную стоимость</label>
-              <input class="min-cost" type="number" name="min-cost" id="min-cost" placeholder="От 0" min="0" max="3000"/>
+              <input class="min-cost spiner-delete" type="number" name="min-cost" id="min-cost" placeholder="От 0" min="0" max="3000"/>
               <label class="visually-hidden" for="max-cost">Ввести максимальную стоимость</label>
-              <input class="max-cost" type="number" name="max-cost" id="max-cost" placeholder="До 3000" min="0" max="3000"/>
+              <input class="max-cost spiner-delete" type="number" name="max-cost" id="max-cost" placeholder="До 3000" min="0" max="3000"/>
               <div class="filter-separate-line"></div>
             </div>
             <div class="slider">
@@ -126,9 +126,9 @@
       <section class="hotels">
         <h2 class="visually-hidden">Список отелей Седоны</h2>
         <article class="hotel-item">
-          <img  class="hotel-photo" src="img/thumb-amara-resort.jpg" alt="Отель у подножия горы"/>
+          <img  class="hotel-photo" src="img/thumb-amara-resort.jpg" width="135" height="90" alt="Отель у подножия горы"/>
           <div class="hotel-info">
-            <h3 class="hotel-title">Amara resort & SPA</h3>
+            <h3><a class="hotel-title" href="#" aria-label="Перейти на страницу гостиницы Amara resort & SPA">Amara resort & SPA</a></h3>
             <div class="hotel-info-wrapper">
               <div class="hotel-info-content-wrapper">
                 <p class="hotel-info-content">Гостиница</p>
@@ -141,14 +141,14 @@
             </div>
           </div>
           <div class="rating">
-            <div class="hotel-rating"></div>
+            <div class="hotel-rating" style="width: calc(var(--star-width) * 4)"></div>
             <span class="hotel-rating-text">Рейтинг: 8.5</span>
           </div>
         </article>
         <article class="hotel-item">
-          <img class="hotel-photo" src="img/thumb-desert-quall.jpg" alt="Классический американский двухэтажный отель"/>
+          <img class="hotel-photo" src="img/thumb-desert-quall.jpg" width="135" height="90" alt="Классический американский двухэтажный отель"/>
           <div class="hotel-info">
-            <h3 class="hotel-title">Desert Quail INN</h3>
+            <h3><a class="hotel-title" href="#" aria-label="Перейти на страницу отеля Desert Quail INN">Desert Quail INN</a></h3>
             <div class="hotel-info-wrapper">
               <div class="hotel-info-content-wrapper">
                 <p class="hotel-info-content">Мотель</p>
@@ -161,15 +161,14 @@
             </div>
           </div>
           <div class="rating">
-            <div class="hotel-rating inn"></div>
+            <div class="hotel-rating inn" style="width: calc(var(--star-width) * 3)"></div>
             <span class="hotel-rating-text">Рейтинг: 8.9</span>
           </div>
         </article>
         <article class="hotel-item">
-          <img class="hotel-photo" src="img/thumb-villas-diablo.jpg" alt="Уютная вилла в тени деревьев"
-          />
+          <img class="hotel-photo" src="img/thumb-villas-diablo.jpg" width="135" height="90" alt="Уютная вилла в тени деревьев" />
           <div class="hotel-info">
-            <h3 class="hotel-title">VILLLAS AT POCO DIABLO</h3>
+            <h3><a  class="hotel-title" href="#" aria-label="Перейти на страницу виллы At POCO DIABLO">VILLLAS AT POCO DIABLO</a></h3>
             <div class="hotel-info-wrapper">
               <div class="hotel-info-content-wrapper">
                 <p class="hotel-info-content">Аппартаменты</p>
@@ -182,7 +181,7 @@
             </div>
           </div>
           <div class="rating">
-            <div class="hotel-rating villa"></div>
+            <div class="hotel-rating villa" style="width: calc(var(--star-width) * 2)"></div>
             <span class="hotel-rating-text">Рейтинг: 9.2</span>
           </div>
         </article>
