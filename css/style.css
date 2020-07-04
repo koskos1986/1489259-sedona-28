@@ -10,7 +10,6 @@
 @font-face {
   font-family: "PT Sans";
   font-weight: bold;
-  font-style: bold;
   src: local("PT Sans Bold"),
   url("../fonts/ptsansbold.woff2") format("woff2"),
   url("../fonts/ptsansbold.woff") format("woff");
@@ -32,10 +31,16 @@
   --basic-brown-light: #766357;
   --basic-brown-dark: #503e33;
   --basic-transparent-footer: rgba(255, 255, 255, 0.9);
+  --basic-button-active: rgba(255, 255, 255, 0.3);
+  --basic-body-shadow: rgba(0, 0, 0, 0.5);
   --basic-grey-disabled: #6a6a6a;
   --basic-grey-line: #e5e5e5;
   --basic-grey-slider: #ababab;
   --basic-grey-minus: #a9a9a9;
+  --bground-image-full-gradient-from: #86b7d5;
+  --bground-image-full-gradient-to: #e1ab84;
+  --bground-filter-gradient-from: #698fb6;
+  --bground-filter-gradient-to: #735c54;
   --star-width: 23px;
 }
 
@@ -95,7 +100,7 @@ body {
   color: var(--basic-black);
 
   background-color: var(--basic-grey-light);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px var(--basic-body-shadow);
 }
 
 .page {
@@ -120,10 +125,10 @@ body {
   color: var(--basic-white);
   border: none;
   text-transform: uppercase;
+  outline: none;
 }
 
-button,
-input {
+.input {
   border: 0;
   outline: none;
 }
@@ -188,9 +193,9 @@ input {
   display: flex;
   min-height: 509px;
 
-  background-image: url("../img/background-photo-full.jpg"), linear-gradient(to right bottom, #8ccfcf,#0e5e38);
+  background-image: url("../img/background-photo-full.jpg"), linear-gradient(to right bottom, var(--bground-image-full-gradient-from), var(--bground-image-full-gradient-to));
   background-size: cover;
-  background-repeat: no-repeat; /*проверить почему не применяется градиент*/
+  background-repeat: no-repeat;
 }
 
 .background-for-greetings::after {
@@ -252,7 +257,6 @@ input {
   flex-wrap: wrap;
 }
 
-/*удалтьб ниже*/
 .feature-picture {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -296,7 +300,7 @@ input {
 }
 
 .advantages-item h3,
-p {
+.advantages-item p {
   margin: 0;
   padding: 0;
 }
@@ -367,15 +371,14 @@ p {
 }
 
 .picture-house::before {
-position: absolute;
-top: 60px;
-left: 167px;
+  position: absolute;
+  top: 60px;
+  left: 167px;
 
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 
-content: url("../img/icon-1.svg");
-background-size: 75px 72px;
+  content: url("../img/icon-house.svg");
 }
 
 .picture-food::before {
@@ -386,8 +389,7 @@ background-size: 75px 72px;
   margin-left: auto;
   margin-right: auto;
 
-  content: url("../img/icon-3.svg");
-  background-size: 75px 70px;
+  content: url("../img/icon-food.svg");
 }
 
 .picture-souvenirs::before {
@@ -395,8 +397,7 @@ background-size: 75px 72px;
   top: 55px;
   right: 172px;
 
-  content: url("../img/icon-2.svg");
-  background-size: 64px 77px;
+  content: url("../img/icon-souvenirs.svg");
 }
 
 .image-part-advantages {
@@ -478,10 +479,11 @@ background-size: 75px 72px;
   z-index: 2;
 
   margin-top: -120px;
-
-  background-color: var(--basic-transparent-footer);
 }
 
+.main-footer {
+  background-color: var(--basic-transparent-footer);
+}
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -500,6 +502,7 @@ background-size: 75px 72px;
 .contacts p {
   margin-bottom: 9px;
   width: auto;
+  padding-left: 42px;
 
   font-size: 21px;
   font-weight: bold;
@@ -535,7 +538,7 @@ background-size: 75px 72px;
   height: 100%;
 }
 
-.social-networks-item img {
+.social-networks-item svg {
   margin: auto;
 }
 
@@ -584,7 +587,7 @@ background-size: 75px 72px;
 }
 
 .filters-of-hotels {
-  min-height: 217px; /*что то с высотой*/
+  min-height: 217px;
 }
 
 .form-filter {
@@ -593,8 +596,7 @@ background-size: 75px 72px;
   width: 1200px;
   min-height: 217px;
 
-  background-color: #f2f2f2;
-  background-image: url("../img/background-filter.png");
+  background-image: url("../img/background-filter.png"), linear-gradient(45deg, var(--bground-filter-gradient-from), var(--bground-filter-gradient-to));
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -660,6 +662,7 @@ background-size: 75px 72px;
   height: 23px;
 
   background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
 
   content: "";
 }
@@ -670,16 +673,11 @@ background-size: 75px 72px;
 
 .filter-checkbox:checked + label::before {
   position: absolute;
-  top: 0;
-  left: -39px;
 
   width: 27px;
-  height: 23px;
 
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
-
-  content: "";
 }
 
 .filter-checkbox:disabled + label::before {
@@ -691,25 +689,26 @@ background-size: 75px 72px;
   height: 23px;
 
   background-image: url("../img/checkbox-off-disabled.svg");
+  background-repeat: no-repeat;
 
   content: "";
+  cursor: default;
 }
 
 .filter-checkbox:checked:disabled + label::before {
   position: absolute;
-  top: 0;
-  left: -39px;
 
-  width: 23px;
-  height: 23px;
+  width: 27px;
 
   background-image: url("../img/checkbox-on-disabled.svg");
+  background-repeat: no-repeat;
 
-  content: "";
+  cursor: default;
 }
 
 .filter-checkbox:disabled + label {
   color: var(--basic-grey-disabled);
+  cursor: default;
 }
 
 .filter-cost {
@@ -734,7 +733,7 @@ background-size: 75px 72px;
   text-align: center;
   color: var(--basic-white);
 
-  border: 2px solid #ffffff;
+  border: 2px solid var(--basic-white);
   box-sizing: border-box;
   border-radius: 2px;
 }
@@ -763,9 +762,9 @@ background-size: 75px 72px;
   color: var(--basic-white);
 
   background-color: transparent;
+  border: none;
 
   overflow: hidden;
-  border: none;
 }
 
 .min-cost {
@@ -822,12 +821,19 @@ background-size: 75px 72px;
 .slider-button {
   position: absolute;
 
+  display: block;
+  width: 4px;
+  height: 4px;
   padding: 0;
-  background-color: transparent;
 
-  border: 0;
-  outline: transparent;
+  border-radius: 50%;
+  background-color: var(--basic-grey-slider);
+  border: 8px solid var(--basic-white);
+  box-shadow: 0 2px 0 0 var(--basic-grey-slider);
+
+  box-sizing: content-box;
 }
+
 .slider-button:first-child {
   top: 0;
   left: 0;
@@ -839,19 +845,7 @@ background-size: 75px 72px;
   left: 252px;
 }
 
-.round {
-  display: block;
-  width: 4px;
-  height: 4px;
-
-  border-radius: 50%;
-  box-sizing: content-box;
-  background-color: var(--basic-grey-slider);
-  border: 8px solid var(--basic-white);
-  box-shadow: 0 2px 0 0 var(--basic-grey-slider);
-}
-
-.round:hover {
+.slider-button:hover {
   width: 5px;
   height: 5px;
 
@@ -899,6 +893,11 @@ background-size: 75px 72px;
   background-color: var(--basic-white);
 }
 
+.find {
+  min-width: 159px;
+  max-width: 159px;
+  padding-right: 10px;
+}
 .finding {
   font-size: 21px;
   line-height: 26px;
@@ -908,7 +907,6 @@ background-size: 75px 72px;
 .sorting {
   display: flex;
   min-width: 846px;
-  margin-left: 45px;
 
   font-size: 12px;
   line-height: 18px;
@@ -971,6 +969,7 @@ background-size: 75px 72px;
   padding: 6px;
 
   background-color: transparent;
+  border: none;
   opacity: 0.2;
 }
 
@@ -986,6 +985,7 @@ background-size: 75px 72px;
 .control-arrow:not(.control-arrow-active):active {
   color: var(--basic-blue-light);
 
+  border: none;
   cursor: pointer;
 }
 
@@ -1120,11 +1120,11 @@ background-size: 75px 72px;
 
 .calendar {
   position: absolute;
-  right: 9px;
+  right: 1px;
 
-  width: 21px;
-  height: 23px;
-  padding: 0;
+  width: 35px;
+  height: 37px;
+  padding: 7px;
   align-items: center;
 
   color: var(--basic-grey-minus);
@@ -1196,6 +1196,7 @@ background-size: 75px 72px;
 
 .hotel-info h3 {
   margin: 0;
+  padding: 0;
 }
 
 .hotel-info {
@@ -1238,19 +1239,11 @@ background-size: 75px 72px;
   margin-bottom: 7px;
   padding-right: 15px;
 }
-/*
-.hotel-title:hover {
-  color: var(--basic-blue-light);
-}
-
-.hotel-title:active {
-  color: var(--basic-black);
-  opacity: 0.3;
-}*/
 
 .hotel-info-content {
   max-width: 110px;
   padding-right: 10px;
+  margin-top: 0;
   margin-bottom: 16px;
 
   line-height: 21px;
@@ -1283,12 +1276,12 @@ background-size: 75px 72px;
 
 .button-find:active,
 .details:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-button-active);
   background-color: var(--basic-blue-dark);
 }
 
 .social-link:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-white);
   background-color: var(--basic-blue-dark);
   opacity: 0.3;
 }
@@ -1318,7 +1311,7 @@ background-size: 75px 72px;
 
 .button-form:active,
 .booking:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-button-active);
   background-color: var(--basic-brown-dark);
 }
 
