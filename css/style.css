@@ -1359,7 +1359,7 @@ body {
 
 @keyframes slide {
   0% {
-    transform: translate(-50%, 0%);
+    transform: translate(0%, -10%);
   }
   100% {
     transform: translate(0%, 0%);
