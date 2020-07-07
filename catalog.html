@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Каталог</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body-page">
     <header class="main-header">
@@ -33,7 +33,7 @@
         <form class="form-filter" action="https://echo.htmlacademy.ru" target="blank">
           <div class="filter-wrapper">
             <fieldset class="filter">
-              <legend class="filter-name">Инфраструктура</legend>
+              <legend class="filter-name">Инфраструктура:</legend>
               <ul class="list filter-list">
                 <li class="filter-list-item">
                   <input class="filter-checkbox visually-hidden" type="checkbox" name="pool" id="item-pool" aria-label="Выбрать бассейн" checked>
@@ -50,7 +50,7 @@
               </ul>
             </fieldset>
             <fieldset class="filter">
-              <legend class="filter-name">Тип жилья</legend>
+              <legend class="filter-name">Тип жилья:</legend>
               <ul class="list filter-list">
                 <li class="filter-list-item">
                   <input class="filter-checkbox visually-hidden" type="checkbox" name="inn" id="item-inn" aria-label="Выбрать гостиницу" checked>
@@ -68,7 +68,7 @@
             </fieldset>
           </div>
           <div class="filter-cost">
-            <label class="cost-per-day">Стоимость в сутки (р)</label>
+            <label class="cost-per-day">Стоимость в сутки (р):</label>
             <div class="interval-cost">
               <label class="visually-hidden" for="min-cost">Ввести минимальную стоимость</label>
               <input class="min-cost spiner-delete" type="number" name="min-cost" id="min-cost" placeholder="От 0" min="0" max="3000">
@@ -79,8 +79,8 @@
             <div class="slider">
               <div class="side-slider"></div>
               <div class="main-slider"></div>
-              <div class="slider-button"></div>
-              <div class="slider-button"></div>
+              <div class="slider-button" aria-label="Левый ползунок фильтра стоимости"></div>
+              <div class="slider-button" aria-label="Правый ползунок фильтра стоимости"></div>
             </div>
             <button class="button filter-button" type="submit" aria-label="Показать варианты гостиниц">Показать</button>
           </div>
@@ -105,12 +105,12 @@
           </ul>
         </div>
         <div class="sorting-switcher">
-          <button class="control-arrow">
+          <button class="control-arrow" aria-label="Показать по возрастанию">
             <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.5 0L0 10H11L5.5 0Z" fill="currentColor"/>
             </svg>
           </button>
-          <button class="button control-arrow control-arrow-active">
+          <button class="button control-arrow control-arrow-active" aria-label="Показать по убыванию">
             <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.5 0L0 10H11L5.5 0Z" fill="currentColor"/>
             </svg>
@@ -135,7 +135,7 @@
             </div>
           </div>
           <div class="rating">
-            <div class="hotel-rating" style="width: calc(var(--star-width) * 4)"></div>
+            <div class="hotel-rating stars-4"></div>
             <span class="hotel-rating-text">Рейтинг: 8.5</span>
           </div>
         </article>
@@ -155,7 +155,7 @@
             </div>
           </div>
           <div class="rating">
-            <div class="hotel-rating inn" style="width: calc(var(--star-width) * 3)"></div>
+            <div class="hotel-rating stars-3"></div>
             <span class="hotel-rating-text">Рейтинг: 8.9</span>
           </div>
         </article>
@@ -175,7 +175,7 @@
             </div>
           </div>
           <div class="rating">
-            <div class="hotel-rating villa" style="width: calc(var(--star-width) * 2)"></div>
+            <div class="hotel-rating stars-2"></div>
             <span class="hotel-rating-text">Рейтинг: 9.2</span>
           </div>
         </article>

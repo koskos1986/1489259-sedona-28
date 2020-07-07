@@ -238,9 +238,9 @@ body {
 
 .greetings-content-item {
   margin-top: 16px;
-  margin-left: 270px;
+  margin-left: 338px;
   margin-bottom: 51px;
-  margin-right: 300px;
+  margin-right: 341px;
 
   font-style: normal;
   font-size: 14px;
@@ -291,16 +291,21 @@ body {
 
 .advantages-item {
   max-width: 400px;
-  padding-top: 50px;
-  padding-right: 51px;
+  padding-top: 47px;
+  padding-right: 46px;
   padding-bottom: 54px;
-  padding-left: 52px;
+  padding-left: 47px;
 
   text-align: center;
 }
 
-.advantages-item h3,
-.advantages-item p {
+.advantage-title-special,
+.advantage-number-special,
+.advantage-text-special,
+.text-part-advantages,
+.advantage-text,
+.advantage-title,
+.advantage-number {
   margin: 0;
   padding: 0;
 }
@@ -318,7 +323,7 @@ body {
 
 .advantage-number,
 .advantage-number-special {
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 
   text-align: center;
   line-height: 21px;
@@ -346,34 +351,34 @@ body {
 .item-part-advantages:first-child {
   position: relative;
 
-  padding-top: 160px;
+  padding-top: 158px;
   padding-right: 62px;
   padding-bottom: 82px;
-  padding-left: 73px;
+  padding-left: 63px;
 }
 
 .item-part-advantages:nth-child(2) {
   position: relative;
 
   padding-top: 160px;
-  padding-right: 59px;
+  padding-right: 52px;
   padding-bottom: 82px;
-  padding-left: 61px;
+  padding-left: 52px;
 }
 
 .item-part-advantages:last-child {
   position: relative;
 
-  padding-top: 160px;
-  padding-right: 65px;
+  padding-top: 159px;
+  padding-right: 62px;
   padding-bottom: 81px;
-  padding-left: 59px;
+  padding-left: 62px;
 }
 
 .picture-house::before {
   position: absolute;
   top: 60px;
-  left: 167px;
+  left: 163px;
 
   margin-left: auto;
   margin-right: auto;
@@ -384,7 +389,7 @@ body {
 .picture-food::before {
   position: absolute;
   top: 61px;
-  left: 162px;
+  left: 164px;
 
   margin-left: auto;
   margin-right: auto;
@@ -395,7 +400,7 @@ body {
 .picture-souvenirs::before {
   position: absolute;
   top: 55px;
-  right: 172px;
+  right: 168px;
 
   content: url("../img/icon-souvenirs.svg");
 }
@@ -407,7 +412,8 @@ body {
 
 .name-part-advantages {
   display: inline-block;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
+  vertical-align: middle;
 }
 
 .text-part-advantages {
@@ -417,7 +423,7 @@ body {
 .proposal {
   position: relative;
 
-  padding-top: 55px;
+  padding-top: 53px;
   padding-bottom: 86px;
 
   background-color: var(--basic-white);
@@ -425,7 +431,7 @@ body {
 
 .proposal-title {
   margin-top: 0;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 
   font-size: 30px;
   line-height: 34px;
@@ -435,10 +441,10 @@ body {
 }
 
 .proposal-content {
-  margin-bottom: 46px;
+  margin-bottom: 42px;
 
   font-size: 14px;
-  line-height: 21px;
+  line-height: 24px;
   font-weight: normal;
   color: var(--basic-black-light);
   text-align: center;
@@ -494,16 +500,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 23px;
+  padding-top: 22px;
   padding-bottom: 36px;
-  padding-left: 117px;
+  padding-left: 124px;
 }
 
 .contacts p {
   margin-top: 0;
   margin-bottom: 9px;
   width: auto;
-  padding-left: 42px;
+  padding-left: 43px;
 
   font-size: 21px;
   font-weight: bold;
@@ -548,7 +554,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   padding-top: 37px;
-  padding-right: 103px;
+  padding-right: 140px;
   padding-bottom: 42px;
 }
 
@@ -617,7 +623,7 @@ body {
 }
 
 .filter:last-child {
-  margin-left: 119px;
+  margin-left: 115px;
 }
 
 .filter-name {
@@ -636,6 +642,10 @@ body {
 
 .filter-list-item label:hover {
   cursor: pointer;
+}
+
+.filter-list-item:focus {
+
 }
 
 .filter-checkbox {
@@ -730,7 +740,7 @@ body {
 .interval-cost {
   display: flex;
   width: 317px;
-  margin-top: 11px;
+  margin-top: 7px;
   margin-bottom: 11px;
 
   text-align: center;
@@ -781,8 +791,8 @@ body {
 
 .filter-separate-line {
   position: absolute;
-  top: 44px;
-  left: 156px;
+  top: 40px;
+  left: 158px;
 
   display: block;
   width: 2px;
@@ -796,7 +806,7 @@ body {
 
   width: 316px;
   height: 21px;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 
 .side-slider {
@@ -888,10 +898,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 29px;
+  padding-top: 25px;
   padding-left: 73px;
-  padding-right: 73px;
-  padding-bottom: 31px;
+  padding-right: 67px;
+  padding-bottom: 27px;
 
   background-color: var(--basic-white);
 }
@@ -918,14 +928,16 @@ body {
 
 .sorting-types-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
+  max-width: 840px;
   margin-left: 40px;
   margin-top: 1px;
 }
 
 .sorting-type-item:not(:last-child) {
-  margin-right: 32px;
+  margin-right: 34px;
 }
 
 .sorting-button {
@@ -966,6 +978,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3px;
 }
 
 .control-arrow {
@@ -1031,7 +1044,7 @@ body {
 }
 
 .find-form-date:nth-child(2) {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .find-form-visitors-item {
@@ -1090,7 +1103,7 @@ body {
   margin-right: 0;
   margin-left: 23px;
   padding-right: 43px;
-  padding-left: 13px;
+  padding-left: 10px;
 }
 
 .checkout-date-text {
@@ -1098,7 +1111,7 @@ body {
   margin-right: 0;
   margin-left: 20px;
   padding-right: 43px;
-  padding-left: 12px;
+  padding-left: 10px;
 }
 
 .adults-number,
@@ -1123,11 +1136,11 @@ body {
 
 .calendar {
   position: absolute;
-  right: 1px;
+  right: 3px;
 
   width: 35px;
   height: 37px;
-  padding: 7px;
+  padding: 8px;
   align-items: center;
 
   color: var(--basic-grey-minus);
@@ -1166,7 +1179,7 @@ body {
 .button-find {
   width: 458px;
   height: 58px;
-  margin-top: 44px;
+  margin-top: 43px;
   margin-right: auto;
   margin-left: auto;
   padding: 0;
@@ -1345,6 +1358,18 @@ body {
 
   background-image: url("../img/star.svg");
   background-position: right;
+}
+
+.stars-4 {
+  width: calc(var(--star-width) * 4);
+}
+
+.stars-3 {
+  width: calc(var(--star-width) * 3);
+}
+
+.stars-2 {
+  width: calc(var(--star-width) * 2);
 }
 
 .form-show {
