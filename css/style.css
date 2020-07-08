@@ -106,6 +106,7 @@ body {
 .page {
   height: 100%;
 }
+
 .body-page {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -343,7 +344,6 @@ body {
 
 .item-part-advantages {
   display: block;
-  vertical-align: middle;
 
   text-align: center;
 }
@@ -576,7 +576,6 @@ body {
   box-sizing: content-box;
 }
 
-/*modal*/
 .modal {
   width: 568px;
   height: 486px;
@@ -653,7 +652,6 @@ body {
 }
 
 .filter-list-item label {
-  /*может и убрать*/
   position: relative;
 
   display: block;
@@ -898,7 +896,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 25px;
+  padding-top: 23px;
   padding-left: 73px;
   padding-right: 67px;
   padding-bottom: 27px;
@@ -911,6 +909,7 @@ body {
   max-width: 159px;
   padding-right: 10px;
 }
+
 .finding {
   font-size: 21px;
   line-height: 26px;
@@ -1039,6 +1038,7 @@ body {
 .find-form-visitors {
   padding-bottom: 10px;
 }
+
 .find-form-date:first-child {
   margin-bottom: 29px;
 }
@@ -1064,9 +1064,6 @@ body {
   margin-right: 13px;
 }
 
-.label-children {
-}
-
 .find-form-item {
   padding-top: 0;
   padding-bottom: 0;
@@ -1076,7 +1073,6 @@ body {
 
 .find-form-item:hover {
   background-color: var(--basic-grey-hover);
-
 }
 
 .find-form-item:focus {
